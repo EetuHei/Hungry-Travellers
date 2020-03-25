@@ -3,4 +3,5 @@
     <string name="title_home">Home</string>
     <string name="title_reservation">Reservation</string>
     <string name="title_profile">Profile</string>
+    <string name="test">Testing</string>
 </resources>
