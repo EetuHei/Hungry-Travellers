@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">hungry-travellersapp</string>
+    <string name="app_nameP1">Hungry</string>
+    <string name="app_nameP2">Traveler\'s</string>
     <string name="title_home">Home</string>
     <string name="title_reservation">Reservation</string>
     <string name="title_profile">Profile</string>
