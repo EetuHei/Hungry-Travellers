@@ -16,8 +16,8 @@
         android:textSize="30sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:gravity="left"
-        android:layout_marginLeft="120dp"
+        android:gravity="start"
+        android:layout_marginStart="120dp"
 
         />
 
@@ -29,8 +29,8 @@
         android:textSize="30sp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appName1"
-        android:gravity="left"
-        android:layout_marginLeft="200dp"
+        android:gravity="start"
+        android:layout_marginStart="200dp"
         />
 
     <TextView
@@ -61,6 +61,17 @@
         android:paddingTop="20dp"
         />
 
+    <Button
+        android:id="@+id/btn_reserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reserve"
+        app:layout_constraintBottom_toBottomOf="@+id/opening_hours2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opening_hours1"
+        app:layout_constraintVertical_bias="0.272" />
 
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>

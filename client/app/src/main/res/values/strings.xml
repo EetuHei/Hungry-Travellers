@@ -4,6 +4,7 @@
     <string name="title_home">Home</string>
     <string name="title_reservation">Reservation</string>
     <string name="title_profile">Profile</string>
-    <string name="opening_hours1">Mon – Sat  11.00–23.00</string>
-    <string name="opening_hours2">Sun        11.00–23.00</string>
+    <string name="opening_hours1">Mon – Sat 11.00–23.00 "&#xA;" Sun 11.00-23.00</string>
+    <string name="opening_hours2">Sun 11.00–23.00</string>
+    <string name="reserve">Reserve table</string>
 </resources>
