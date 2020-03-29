@@ -1,5 +1,6 @@
 package hungry.travelersapp.hungry_travellers_app.ui.reserve;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -15,22 +16,26 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
 import org.w3c.dom.Text;
 
+import java.text.DateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.TimeZone;
 
 import hungry.travelersapp.hungry_travellers_app.R;
 
-public class ReserveFragment extends Fragment {
+public class ReserveFragment extends Fragment  {
 
     private ReserveViewModel reserveViewModel;
-
-
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,8 +51,8 @@ public class ReserveFragment extends Fragment {
         final EditText userInput2 = root.findViewById(R.id.reserve_name);
         final EditText userInput3 = root.findViewById(R.id.reserve_phoneNumber);
         final Button submitBtn = root.findViewById(R.id.ButtonSendFeedback);
-
-
+        final Button datePickerBtn = root.findViewById(R.id.datePickerButton);
+        final TextView datePicked = root.findViewById(R.id.datePickerTextView);
 
         reserveViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -73,13 +78,21 @@ public class ReserveFragment extends Fragment {
                 textView4.setText(s);
             }
         });
-
        /* reserveViewModel.getText2().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView2.setText(s);
             }
         }); */
+
+        datePickerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                DialogFragment datePicker = new DatePickerFragment();
+                datePicker.show(fragmentManager, "date picker");
+            }
+        });
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,10 +107,8 @@ public class ReserveFragment extends Fragment {
         });
 
        // final EditText userInput = root.findViewById(R.id.reserve_people);
-
-
-
         return root;
     }
+
 
 }
