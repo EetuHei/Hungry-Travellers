@@ -46,11 +46,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appName2" />
 
-    <Button
-        android:id="@+id/btn_reserve"
+    <TextView
+        android:id="@+id/introduction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/reserve"
+        android:text="@string/introducing"
+        android:textSize="15sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/opening_hours1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
