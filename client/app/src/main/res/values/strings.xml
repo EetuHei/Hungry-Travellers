@@ -1,6 +1,11 @@
 <resources>
-    <string name="app_name">hungry-travellersapp</string>
+    <string name="app_nameP1">Hungry</string>
+    <string name="app_nameP2">Traveler\'s</string>
     <string name="title_home">Home</string>
     <string name="title_reservation">Reservation</string>
     <string name="title_profile">Profile</string>
+    <string name="opening_hours1">Mon – Sat 11.00–23.00 \n Sun 11.00-23.00</string>
+    <string name="contacts">Hungry Traveler\'s, \n Uusikatu 70, 90200 Oulu \n 045 32 67 895</string>
+    <string name="introducing">Welcome to our restaurant! \n\n We will offer you delicious variety of \n
+    homemade dishes from different cultures. \n Enjoy!</string>
 </resources>
