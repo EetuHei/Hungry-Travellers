@@ -8,4 +8,8 @@
     <string name="contacts">Hungry Traveler\'s, \n Uusikatu 70, 90200 Oulu \n 045 32 67 895</string>
     <string name="introducing">Welcome to our restaurant! \n\n We will offer you delicious variety of \n
     homemade dishes from different cultures. \n Enjoy!</string>
+    <string name="profile_instructions">Please login to your account \n for pre-order or home delivery
+    \n\n If you do not have an account yet, \n please choose sign up</string>
+    <string name="profile_login">Login</string>
+    <string name="profile_signUp">Sign up</string>
 </resources>
