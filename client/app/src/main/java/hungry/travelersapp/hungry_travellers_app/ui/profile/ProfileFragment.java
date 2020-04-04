@@ -1,5 +1,6 @@
 package hungry.travelersapp.hungry_travellers_app.ui.profile;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,11 +40,25 @@ public class ProfileFragment extends Fragment {
                     openLogin();
                 }
             });
-            
-            protected void openLogin() {
 
-        }
+            final Button signUpBtn = root.findViewById(R.id.profile_signUp);
+
+            signUpBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    openSignUp();
+                }
+            });
 
         return root;
+    }
+    protected void openLogin() {
+        Intent intent = new Intent(getActivity(), LoginActivity.class);
+        startActivity(intent);
+    }
+
+    protected void openSignUp() {
+        Intent intent = new Intent(getActivity(), SignUpActivity.class);
+        startActivity(intent);
     }
 }

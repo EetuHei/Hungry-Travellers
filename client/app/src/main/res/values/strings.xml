@@ -12,4 +12,7 @@
     \n\n If you do not have an account yet, \n please choose sign up</string>
     <string name="profile_login">Login</string>
     <string name="profile_signUp">Sign up</string>
+    <string name="text_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="log_in">Log in</string>
 </resources>
