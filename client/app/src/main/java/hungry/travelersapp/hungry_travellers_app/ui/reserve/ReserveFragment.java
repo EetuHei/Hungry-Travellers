@@ -26,6 +26,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import org.w3c.dom.Text;
 
+import java.text.CollationElementIterator;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -36,6 +37,9 @@ import hungry.travelersapp.hungry_travellers_app.R;
 public class ReserveFragment extends Fragment  {
 
     private ReserveViewModel reserveViewModel;
+    public static int yearData;
+    public static int monthData;
+    public static int dayData;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -78,12 +82,14 @@ public class ReserveFragment extends Fragment  {
                 textView4.setText(s);
             }
         });
+
        /* reserveViewModel.getText2().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView2.setText(s);
             }
         }); */
+
 
         datePickerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +103,8 @@ public class ReserveFragment extends Fragment  {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String pickedDateData = String.format("%02d", dayData) + "." + String.format("%02d", monthData + 1) + "." + String.format("%02d", yearData);
+                Log.d(pickedDateData, "is the date here");
                 String peopleAmount = userInput.getText().toString();
                 String reservationName = userInput2.getText().toString();
                 String reservationPhoneNumber = userInput3.getText().toString();
@@ -106,9 +114,17 @@ public class ReserveFragment extends Fragment  {
             }
         });
 
+
        // final EditText userInput = root.findViewById(R.id.reserve_people);
         return root;
     }
 
+    public static void displaydate(int year, int monthOfYear, int dayOfMonth) {
+     //   datePicked.setText(dayData + " " + monthData + " " + yearData);
+
+        yearData = year;
+        monthData = monthOfYear;
+        dayData = dayOfMonth;
+    }
 
 }
