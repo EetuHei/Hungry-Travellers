@@ -2,6 +2,7 @@ package hungry.travelersapp.hungry_travellers_app.ui.reserve;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,19 +27,31 @@ public class DatePickerFragment extends DialogFragment implements
         DatePickerDialog.OnDateSetListener {
     private int year, month, day;
     private Button btn;
+    private DatePickerFragment.OnDateReceiveCallBack mListener;
+    private Context context;
+
+    public interface OnDateReceiveCallBack {
+        void onDateReceive(int year, int month, int day);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        this.context = context;
+
+        try {
+            mListener = (DatePickerFragment.OnDateReceiveCallBack) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString() + " must implement OnDateSetListener");
+        }
+    }
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-        this.year = year;
-        this.month = month;
-        this.day = dayOfMonth;
-
-        String yearStr = String.valueOf(this.year);
-        String monthStr = String.valueOf(this.month + 1);
-        String dayStr = String.valueOf(this.day);
-
-        Log.d(yearStr + " " + monthStr + " " + dayStr, "selected date");
+        TextView pickedDate = (TextView) getActivity().findViewById(R.id.datePickerTextView);
+        String pickedDateData = String.format("Picked date:\n" + "%02d", dayOfMonth) + "." + String.format("%02d", month + 1) + "." + String.format("%02d", year);
+        pickedDate.setText(pickedDateData);
+        mListener.onDateReceive(year, month, dayOfMonth);
     }
 
 
