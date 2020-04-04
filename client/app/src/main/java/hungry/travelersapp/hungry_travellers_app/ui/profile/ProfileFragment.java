@@ -36,9 +36,13 @@ public class ProfileFragment extends Fragment {
             loginBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    
+                    openLogin();
                 }
             });
+            
+            protected void openLogin() {
+
+        }
 
         return root;
     }
