@@ -5,23 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.reserve.ReserveFragment">
-
-
-    <!-- <TextView
-            android:id="@+id/text_testi"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6" /> -->
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,18 +13,15 @@
         android:paddingRight="16dp"
         android:orientation="vertical">
 
-
         <TextView
             android:id="@+id/text_reserve"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="5dp"
             android:textAlignment="center"
             android:textSize="30sp"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp" />
-
-        
 
         <TextView
         android:id="@+id/text_people"
@@ -66,11 +46,12 @@
             android:id="@+id/text_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/reserve_name"
             tools:ignore="MissingConstraints" />
+
 
         <EditText
             android:id="@+id/reserve_name"
@@ -84,7 +65,7 @@
             android:id="@+id/text_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/reserve_phoneNumber"
@@ -98,13 +79,29 @@
         android:textAlignment="center"
         tools:ignore="MissingConstraints"
         app:layout_constraintBottom_toTopOf="@+id/ButtonSendFeedBack" />
-        
+
+
+        <TextView
+            android:id="@+id/datePickerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Picked date"
+            android:textAlignment="center"
+            android:textSize="26sp" />
+
+        <Button
+            android:id="@+id/datePickerButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Choose a day"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/ButtonSendFeedback"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="5dp"
             android:text="SUBMIT"
             tools:ignore="MissingConstraints" />
 
