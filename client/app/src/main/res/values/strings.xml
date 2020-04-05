@@ -15,4 +15,11 @@
     <string name="text_email">Email</string>
     <string name="login_password">Password</string>
     <string name="log_in">Log in</string>
+    <string name="text_nameOfUser">Your name</string>
+    <string name="email_hint">Needed in login</string>
+    <string name="text_phoneOfUser">Your phone number</string>
+    <string name="text_address">Your address</string>
+    <string name="address_hint">Needed for home delivery</string>
+    <string name="password_hint">Invent a unique password</string>
+    <string name="signUp_btn">Sign up</string>
 </resources>
