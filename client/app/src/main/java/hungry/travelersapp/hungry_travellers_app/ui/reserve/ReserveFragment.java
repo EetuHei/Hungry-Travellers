@@ -24,6 +24,9 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import org.w3c.dom.Text;
 
 import java.text.CollationElementIterator;
@@ -41,8 +44,15 @@ public class ReserveFragment extends Fragment  {
     public static int monthData;
     public static int dayData;
 
+   DatabaseReference databaseReservations;
+
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+        databaseReservations = FirebaseDatabase.getInstance().getReference("Reservations");
+
         reserveViewModel =
                 ViewModelProviders.of(this).get(ReserveViewModel.class);
         final View root = inflater.inflate(R.layout.fragment_reserve, container, false);
@@ -111,6 +121,14 @@ public class ReserveFragment extends Fragment  {
                 Log.d(peopleAmount, "dasdsa");
                 Log.d(reservationName, "kappa kappa");
                 Log.d(reservationPhoneNumber, "numero");
+
+
+                String id = databaseReservations.push().getKey();
+
+                Reservations reservation = new Reservations(peopleAmount, reservationName, reservationPhoneNumber, pickedDateData);
+
+                databaseReservations.setValue(reservation);
+
             }
         });
 
