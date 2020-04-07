@@ -3,4 +3,7 @@
     <string name="title_home">Home</string>
     <string name="title_reservation">Reservation</string>
     <string name="title_profile">Profile</string>
+    <string name="title_menu">Menu</string>
+    <string name="falafels_with_pepper_taktouka_10_00">Falafels with pepper taktouka 10,00 €</string>
+
 </resources>
