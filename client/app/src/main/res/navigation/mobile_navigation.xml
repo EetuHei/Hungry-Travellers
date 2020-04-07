@@ -18,15 +18,15 @@
         tools:layout="@layout/fragment_reserve" />
 
     <fragment
-        android:id="@+id/navigation_profile"
-        android:name="hungry.travelersapp.hungry_travellers_app.ui.profile.ProfileFragment"
-        android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
-
-    <fragment
         android:id="@+id/navigation_menu"
         android:name="hungry.travelersapp.hungry_travellers_app.ui.menu.MenuFragment"
         android:label="Menu"
         tools:layout="@layout/fragment_menu" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="hungry.travelersapp.hungry_travellers_app.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

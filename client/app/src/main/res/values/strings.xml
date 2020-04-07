@@ -10,4 +10,7 @@
     <string name="introducing">Welcome to our restaurant! \n\n We will offer you delicious variety of \n
     homemade dishes from different cultures. \n Enjoy!</string>
     <string name="falafels_with_pepper_taktouka_10_00">Falafels with pepper taktouka 10,00 €</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
