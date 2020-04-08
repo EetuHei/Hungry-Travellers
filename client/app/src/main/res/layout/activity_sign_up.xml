@@ -121,7 +121,7 @@
             tools:ignore="MissingConstraints" />
 
         <Button
-            android:id="@+id/signUp_btn"
+            android:id="@+id/ButtonSignUp"
             android:text="@string/signUp_btn"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
