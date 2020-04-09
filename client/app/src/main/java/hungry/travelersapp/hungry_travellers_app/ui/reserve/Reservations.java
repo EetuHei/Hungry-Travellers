@@ -2,9 +2,10 @@ package hungry.travelersapp.hungry_travellers_app.ui.reserve;
 
 public class Reservations {
 
-    String reservationAmount;
+    String reservationId;
     String reservationName;
     String reservationNumber;
+    String reservationAmount;
     String reservationDate;
 
 
@@ -12,12 +13,15 @@ public class Reservations {
 
     }
 
-    public Reservations(String reservationAmount, String reservationName, String reservationNumber, String reservationDate) {
+    public Reservations(String reservationId, String reservationAmount, String reservationName, String reservationNumber, String reservationDate) {
+        this.reservationId = reservationId;
         this.reservationAmount = reservationAmount;
         this.reservationName = reservationName;
         this.reservationNumber = reservationNumber;
         this.reservationDate = reservationDate;
     }
+
+    public String getReservationId() { return reservationId; }
 
     public String getReservationAmount() {
         return reservationAmount;

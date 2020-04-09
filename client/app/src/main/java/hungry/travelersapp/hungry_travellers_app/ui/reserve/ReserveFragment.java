@@ -125,12 +125,13 @@ public class ReserveFragment extends Fragment  {
 
                 String id = databaseReservations.push().getKey();
 
-                Reservations reservation = new Reservations(peopleAmount, reservationName, reservationPhoneNumber, pickedDateData);
+                Reservations reservation = new Reservations(id, peopleAmount, reservationName, reservationPhoneNumber, pickedDateData);
 
-                databaseReservations.setValue(reservation);
+                databaseReservations.child(id).setValue(reservation);
 
             }
         });
+
 
 
        // final EditText userInput = root.findViewById(R.id.reserve_people);
@@ -144,5 +145,6 @@ public class ReserveFragment extends Fragment  {
         monthData = monthOfYear;
         dayData = dayOfMonth;
     }
+
 
 }
