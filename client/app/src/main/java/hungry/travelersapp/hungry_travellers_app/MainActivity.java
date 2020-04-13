@@ -10,7 +10,14 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class MainActivity extends AppCompatActivity {
+import hungry.travelersapp.hungry_travellers_app.ui.reserve.DatePickerFragment;
+import hungry.travelersapp.hungry_travellers_app.ui.reserve.ReserveFragment;
+
+public class MainActivity extends AppCompatActivity implements DatePickerFragment.OnDateReceiveCallBack {
+
+    public void onDateReceive(int year ,int month, int day){
+        ReserveFragment.displaydate(year,month,day);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
