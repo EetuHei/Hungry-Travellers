@@ -5,107 +5,127 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.reserve.ReserveFragment">
-    
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/text_reserve"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="0dp" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
 
-        <TextView
-        android:id="@+id/text_people"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintBottom_toTopOf="@+id/reserve_people"/>
+            <TextView
+                android:id="@+id/text_reserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp" />
 
-        <EditText
-            android:id="@+id/reserve_people"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="2"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/reserve_name"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/text_people"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/reserve_people"
+                tools:ignore="MissingConstraints" />
 
-
-        <TextView
-            android:id="@+id/text_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/reserve_name"
-            tools:ignore="MissingConstraints" />
+            <EditText
+                android:id="@+id/reserve_people"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="2"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/reserve_name"
+                tools:ignore="MissingConstraints" />
 
 
-        <EditText
-            android:id="@+id/reserve_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:hint="Mikko Mallikas"
-            tools:ignore="MissingConstraints"/>
-
-        <TextView
-            android:id="@+id/text_number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/reserve_phoneNumber"
-            tools:ignore="MissingConstraints" />
-
-        <EditText
-        android:id="@+id/reserve_phoneNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="123-1231233"
-        android:textAlignment="center"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintBottom_toTopOf="@+id/ButtonSendFeedBack" />
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/reserve_name"
+                tools:ignore="MissingConstraints" />
 
 
-        <TextView
-            android:id="@+id/datePickerTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Picked date"
-            android:textAlignment="center"
-            android:textSize="26sp" />
+            <EditText
+                android:id="@+id/reserve_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mikko Mallikas"
+                android:textAlignment="center"
+                tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/datePickerButton"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Choose a day"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/text_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/reserve_phoneNumber"
+                tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/ButtonSendFeedback"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="SUBMIT"
-            tools:ignore="MissingConstraints" />
+            <EditText
+                android:id="@+id/reserve_phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="123-1231233"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/ButtonSendFeedBack"
+                tools:ignore="MissingConstraints" />
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/reserve_phoneNumber"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/reserve_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="13.00-14.00"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/ButtonSendFeedBack"
+                tools:ignore="MissingConstraints" />
+
+
+            <TextView
+                android:id="@+id/datePickerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Picked date"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/datePickerButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Choose a day"
+                tools:ignore="MissingConstraints" />
+
+            <Button
+                android:id="@+id/ButtonSendFeedback"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="SUBMIT"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
