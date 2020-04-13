@@ -4,21 +4,11 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-
-import java.text.DateFormat;
 import java.util.Calendar;
 
 import hungry.travelersapp.hungry_travellers_app.R;
@@ -54,8 +44,6 @@ public class DatePickerFragment extends DialogFragment implements
         mListener.onDateReceive(year, month, dayOfMonth);
     }
 
-
-
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
@@ -68,9 +56,5 @@ public class DatePickerFragment extends DialogFragment implements
         // Create a new instance of DatePickerDialog and return it
         return new DatePickerDialog(getActivity(), this, year, month, day);
     }
-
-
-
-
 }
 
