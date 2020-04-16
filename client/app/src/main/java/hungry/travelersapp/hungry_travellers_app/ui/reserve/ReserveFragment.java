@@ -23,6 +23,17 @@ import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import org.w3c.dom.Text;
+
+import java.text.CollationElementIterator;
+import java.text.DateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
 import hungry.travelersapp.hungry_travellers_app.R;
 
 public class ReserveFragment extends Fragment  {
@@ -36,8 +47,15 @@ public class ReserveFragment extends Fragment  {
     public String reservationPhoneNumber = "";
     public String reservationTime = "";
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             final ViewGroup container, Bundle savedInstanceState) {
+   DatabaseReference databaseReservations;
+
+
+
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
+        databaseReservations = FirebaseDatabase.getInstance().getReference("Reservations");
+
         reserveViewModel =
                 ViewModelProviders.of(this).get(ReserveViewModel.class);
         final View root = inflater.inflate(R.layout.fragment_reserve, container, false);
@@ -174,6 +192,13 @@ public class ReserveFragment extends Fragment  {
                     Log.d(reservationPhoneNumber, "number");
                     Log.d(reservationTime, "Time");
                     Log.d(pickedDateData, "picked date");
+
+                    String id = databaseReservations.push().getKey();
+
+                    Reservations reservation = new Reservations(id, peopleAmount, reservationName, reservationPhoneNumber, pickedDateData, reservationTime);
+
+                    databaseReservations.child(id).setValue(reservation);
+
                     Toast.makeText(getContext(), "Reservation successful!", Toast.LENGTH_LONG).show();
                     // Validation is working for everything else except picked date because it seems to default to 00.01.00.
                 }
@@ -188,6 +213,7 @@ public class ReserveFragment extends Fragment  {
         monthData = monthOfYear;
         dayData = dayOfMonth;
     }
+
 
     private Boolean validationSuccess(){
         if(peopleAmount.isEmpty()){
@@ -210,5 +236,4 @@ public class ReserveFragment extends Fragment  {
         }
         return true;
     }
-
 }
