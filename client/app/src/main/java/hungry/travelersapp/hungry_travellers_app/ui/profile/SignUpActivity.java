@@ -116,27 +116,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     }
 
-     /*   signUpBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String usersName = signUpInput.getText().toString();
-                String usersEmail = signUpInput2.getText().toString();
-                String usersPhone = signUpInput3.getText().toString();
-                String usersAddress = signUpInput4.getText().toString();
-                String usersPassword = signUpInput5.getText().toString();
-
-                Log.d(usersName, "test");
-                Log.d(usersEmail, "test email");
-                Log.d(usersPhone, "123");
-                Log.d(usersAddress, "test address");
-                Log.d(usersPassword, "password");
-            }
-        }); */
-
-
     @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.ButtonSignUp:
                 registerUser();
                 break;
