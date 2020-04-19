@@ -118,10 +118,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.ButtonSignUp:
+        if (v.getId() == R.id.ButtonSignUp) {
                 registerUser();
-                break;
         }
 
     }
