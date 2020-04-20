@@ -7,6 +7,7 @@ import hungry.travelersapp.hungry_travellers_app.R;
 
 public class MenuViewModel extends ViewModel {
 
+
     /*private MutableLiveData<String> mText;
 
     public MenuViewModel() {
