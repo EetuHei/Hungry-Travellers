@@ -11,4 +11,320 @@
         android:id="@+id/Menu_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <TextView
+
+        android:id="@+id/text_menu"
+
+        android:layout_width="133dp"
+
+        android:layout_height="47dp"
+
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="8dp"
+
+        android:background="#CDC0CF"
+
+        android:text="@string/title_menu"
+
+        android:textAlignment="center"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+
+        android:textSize="20sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.44"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.011" />
+
+
+
+    <ImageView
+
+        android:id="@+id/imageView"
+
+        android:layout_width="83dp"
+
+        android:layout_height="66dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.195"
+
+        app:srcCompat="@drawable/ic_dashboard_black_24dp" />
+
+
+
+    <TextView
+
+        android:id="@+id/textView"
+
+        android:layout_width="417dp"
+
+        android:layout_height="34dp"
+
+        android:background="#DBD5E6"
+
+        android:text="Special dish"
+
+        android:textAlignment="center"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.111" />
+
+
+
+    <Button
+
+        android:id="@+id/button"
+
+        android:layout_width="63dp"
+
+        android:layout_height="39dp"
+
+        android:text="Add"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.954"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.202" />
+
+
+
+    <Spinner
+
+        android:id="@+id/spinner2"
+
+        android:layout_width="409dp"
+
+        android:layout_height="wrap_content"
+
+        android:backgroundTint="#FFC107"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+
+        android:id="@+id/textView2"
+
+        android:layout_width="405dp"
+
+        android:layout_height="29dp"
+
+        android:layout_marginEnd="6dp"
+
+        android:background="#DBD5E6"
+
+        android:text="A la carte "
+
+        android:textAlignment="center"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/spinner2"
+
+        app:layout_constraintVertical_bias="0.333" />
+
+
+
+    <TextView
+
+        android:id="@+id/textView3"
+
+        android:layout_width="351dp"
+
+        android:layout_height="60dp"
+
+        android:text="L=LACTOSE FREE,G=GLUTEN FREE,VN=VEGAN,M=MILK FREE,V=VEGETARIAN DISH,LL=LOW LACTOSE"
+
+        android:textAlignment="center"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+
+        tools:layout_editor_absoluteX="28dp"
+
+        tools:layout_editor_absoluteY="284dp" />
+
+
+
+    <ImageView
+
+        android:id="@+id/imageView3"
+
+        android:layout_width="83dp"
+
+        android:layout_height="60dp"
+
+        android:src="@drawable/ic_dashboard_black_24dp"
+
+        tools:layout_editor_absoluteX="0dp"
+
+        tools:layout_editor_absoluteY="366dp" />
+
+
+
+    <ImageView
+
+        android:id="@+id/imageView4"
+
+        android:layout_width="68dp"
+
+        android:layout_height="66dp"
+
+        android:src="@drawable/ic_dashboard_black_24dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.02"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.673" />
+
+
+
+    <ImageView
+
+        android:id="@+id/imageView5"
+
+        android:layout_width="62dp"
+
+        android:layout_height="65dp"
+
+        android:src="@drawable/ic_dashboard_black_24dp"
+
+        tools:layout_editor_absoluteX="7dp"
+
+        tools:layout_editor_absoluteY="533dp" />
+
+
+
+    <ImageView
+
+        android:id="@+id/imageView6"
+
+        android:layout_width="62dp"
+
+        android:layout_height="76dp"
+
+        android:src="@drawable/ic_dashboard_black_24dp"
+
+        tools:layout_editor_absoluteX="7dp"
+
+        tools:layout_editor_absoluteY="619dp" />
+
+
+
+    <Button
+
+        android:id="@+id/button2"
+
+        android:layout_width="56dp"
+
+        android:layout_height="39dp"
+
+        android:text="Add"
+
+        tools:layout_editor_absoluteX="333dp"
+
+        tools:layout_editor_absoluteY="385dp" />
+
+
+
+    <Button
+
+        android:id="@+id/button3"
+
+        android:layout_width="53dp"
+
+        android:layout_height="38dp"
+
+        android:text="Add"
+
+        tools:layout_editor_absoluteX="333dp"
+
+        tools:layout_editor_absoluteY="481dp" />
+
+
+
+    <Button
+
+        android:id="@+id/button4"
+
+        android:layout_width="55dp"
+
+        android:layout_height="35dp"
+
+        android:text="Add"
+
+        tools:layout_editor_absoluteX="334dp"
+
+        tools:layout_editor_absoluteY="574dp" />
+
+
+
+    <Button
+
+        android:id="@+id/button5"
+
+        android:layout_width="53dp"
+
+        android:layout_height="37dp"
+
+        android:text="Add"
+
+        tools:layout_editor_absoluteX="336dp"
+
+        tools:layout_editor_absoluteY="659dp" />
 </RelativeLayout>

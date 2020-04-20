@@ -19,6 +19,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import hungry.travelersapp.hungry_travellers_app.R;
 
@@ -61,15 +62,19 @@ public class MenuFragment extends Fragment  {
                         .build();
 
         FirebaseRecyclerAdapter<Food, FoodViewHolder> adapter
-                = new FirebaseRecyclerAdapter<Food, FoodViewHolder>() {
+                = new FirebaseRecyclerAdapter<Food, FoodViewHolder>()
+                {
             @Override
             protected void onBindViewHolder(@NonNull FoodViewHolder holder, int position, @NonNull Food model) {
-
+                String foodIDs = getRef(position).getKey();
+                foodRef.child(foodIDs).addValueEventListener(new ValueEventListener);
             }
 
             @NonNull
             @Override
-            public FoodViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            public FoodViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+                boolean attachToRoot;
+                View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.fragment_menu, viewGroup, attachToRoot:false)
                 return null;
             }
         };
