@@ -3,11 +3,13 @@ package hungry.travelersapp.hungry_travellers_app.ui.profile;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,6 +24,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     private EditText editTextName, editTextEmail, editTextPhone, editTextAddress, editTextPassword ;
     private FirebaseAuth mAuth;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         editTextPassword = findViewById(R.id.login_password);
 
         mAuth = FirebaseAuth.getInstance();
-
+        progressBar = findViewById(R.id.progressBar);
         findViewById(R.id.ButtonSignUp).setOnClickListener(this);
 
     }
@@ -55,29 +58,35 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         final String phone = editTextPhone.getText().toString().trim();
         final String address = editTextAddress.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        progressBar.setVisibility(View.VISIBLE);
 
         if (name.isEmpty()) {
             Toast.makeText(getApplicationContext(),"Please fill in your full name", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
         if (email.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please fill in your email", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
         if (phone.length() != 10) {
             Toast.makeText(getApplicationContext(), "Please enter valid phone number, number should be 10 characters", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
         if (address.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Please fill in address for home delivery", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
         if (password.isEmpty() || password.length() < 6) {
             Toast.makeText(getApplicationContext(), "Please fill in password minimum of 6 characters", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
             return;
         }
 
@@ -101,9 +110,14 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Toast.makeText(getApplicationContext(), "Registration successful", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+
+                                        Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
+                                        startActivity(intent);
                                     }
                                     else {
                                         Toast.makeText(getApplicationContext(), "Something went wrong", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
                                     }
                                 }
                             });
