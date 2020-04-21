@@ -51,7 +51,7 @@ public class ProfileFragment extends Fragment {
                     logOut();
                 }
             });
-            
+
             final Button loginBtn = root.findViewById(R.id.profile_login);
 
             loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -83,8 +83,8 @@ public class ProfileFragment extends Fragment {
     }
 
     protected void logOut(){
-        mAuth.signOut();
         if(mGetCurrentuser != null){
+            mAuth.signOut();
             Toast.makeText(getContext(), "Successfully logged out!", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(getActivity(), MainActivity.class);
             startActivity(intent);
