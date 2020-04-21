@@ -12,7 +12,16 @@ import androidx.navigation.ui.NavigationUI;
 
 import hungry.travelersapp.hungry_travellers_app.R;
 
-public class MainActivity extends AppCompatActivity {
+
+import hungry.travelersapp.hungry_travellers_app.ui.reserve.DatePickerFragment;
+import hungry.travelersapp.hungry_travellers_app.ui.reserve.ReserveFragment;
+
+public class MainActivity extends AppCompatActivity implements DatePickerFragment.OnDateReceiveCallBack {
+
+    public void onDateReceive(int year ,int month, int day){
+        ReserveFragment.displaydate(year,month,day);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

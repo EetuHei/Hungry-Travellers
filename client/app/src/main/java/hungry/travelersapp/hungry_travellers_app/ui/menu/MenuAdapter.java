@@ -98,14 +98,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
 
         Food food=new Food();
 
-       /* Toast.makeText(context, "food name=: "+name, Toast.LENGTH_SHORT).show();
-        Toast.makeText(context, "food Description=: "+desc, Toast.LENGTH_SHORT).show();
-        Toast.makeText(context, "food Price=: "+price, Toast.LENGTH_SHORT).show();
-        Toast.makeText(context, "food Image=: "+imgUrl, Toast.LENGTH_SHORT).show();
-
-
-
-*/
        ++i;
         String item="Item"+i;
         Toast.makeText(context, "food =: "+item, Toast.LENGTH_SHORT).show();
