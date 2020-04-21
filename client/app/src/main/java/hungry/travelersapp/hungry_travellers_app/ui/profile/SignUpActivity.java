@@ -18,6 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import hungry.travelersapp.hungry_travellers_app.MainActivity;
 import hungry.travelersapp.hungry_travellers_app.R;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
@@ -48,7 +49,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         super.onStart();
 
         if (mAuth.getCurrentUser() != null) {
-            //handle the logged in user
+            Toast.makeText(getApplicationContext(), "Already logged in!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+            startActivity(intent);
         }
     }
 
