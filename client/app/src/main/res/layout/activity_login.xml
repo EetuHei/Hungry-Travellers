@@ -40,9 +40,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            tools:ignore="MissingConstraints"
+            android:hint="example@gmail.com"
             app:layout_constraintBottom_toTopOf="@+id/login_password"
-            />
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/text_password"
@@ -62,6 +62,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
+            android:hint="password"
             tools:ignore="MissingConstraints"/>
 
         <Button
@@ -71,6 +72,19 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
 
     </LinearLayout>
 
