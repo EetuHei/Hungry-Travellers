@@ -14,7 +14,7 @@
     <string name="profile_signUp">Sign up</string>
     <string name="text_email">Email</string>
     <string name="login_password">Password</string>
-    <string name="log_in">Log in</string>
+    <string name="log_in">Login</string>
     <string name="text_nameOfUser">Your name</string>
     <string name="email_hint">Needed in login</string>
     <string name="text_phoneOfUser">Your phone number</string>
