@@ -1,53 +1,50 @@
 package hungry.travelersapp.hungry_travellers_app.ui.menu;
 
-public class Food {
-    public String name , image, description, price;
+import hungry.travelersapp.hungry_travellers_app.CartData.CartModel;
 
-    public Food()
-    {
+public class Food extends CartModel {
+    private String Name , Image, Description, Price;
 
+    public Food() {
     }
 
-    public Food(String name, String image , String description, String price) {
-        this.name = name;
-        this.image = image;
-        this.description = description;
-        this.price = price;
+    public Food(String name, String image, String description, String price) {
+        Name = name;
+        Image = image;
+        Description = description;
+        Price = price;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        Name = name;
     }
 
     public String getImage() {
-        return image;
+        return Image;
     }
 
     public void setImage(String image) {
-        this.image = image;
+        Image = image;
     }
 
     public String getDescription() {
-        return description;
+        return Description;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        Description = description;
     }
 
     public String getPrice() {
-        return price;
+        return Price;
     }
 
     public void setPrice(String price) {
-        this.price = price;
+        Price = price;
     }
-
-
-
-    }
+}
 
