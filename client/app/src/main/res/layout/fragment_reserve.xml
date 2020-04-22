@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
     tools:context=".ui.reserve.ReserveFragment">
 
         <LinearLayout
@@ -17,9 +18,9 @@
                 android:id="@+id/text_reserve"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="3dp"
+                android:layout_marginBottom="15dp"
                 android:textAlignment="center"
-                android:textSize="20sp"
+                android:textSize="34sp"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="0dp" />
 
