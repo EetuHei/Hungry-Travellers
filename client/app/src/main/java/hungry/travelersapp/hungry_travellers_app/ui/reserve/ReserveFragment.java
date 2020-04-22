@@ -72,7 +72,6 @@ public class ReserveFragment extends Fragment  {
         final EditText userInput4 = root.findViewById(R.id.reserve_time);
         final Button submitBtn = root.findViewById(R.id.ButtonSendFeedback);
         final Button datePickerBtn = root.findViewById(R.id.datePickerButton);
-        final Button homeDelivery = root.findViewById(R.id.homeDelivery);
         final TextView datePicked = root.findViewById(R.id.datePickerTextView);
 
         reserveViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
@@ -208,20 +207,9 @@ public class ReserveFragment extends Fragment  {
             }
         });
 
-        homeDelivery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openDelivery();
-            }
-        });
-
         return root;
     }
 
-    public void openDelivery(){
-        Intent intent = new Intent(getActivity(), DeliveryActivity.class);
-        startActivity(intent);
-    }
 
     public static void displaydate(int year, int monthOfYear, int dayOfMonth) {
         yearData = year;
