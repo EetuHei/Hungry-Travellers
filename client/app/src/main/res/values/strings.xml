@@ -9,12 +9,7 @@
     <string name="contacts">Hungry Traveler\'s, \n Uusikatu 70, 90200 Oulu \n 045 32 67 895</string>
     <string name="introducing">Welcome to our restaurant! \n\n We will offer you delicious variety of \n
     homemade dishes from different cultures. \n Enjoy!</string>
-<<<<<<< HEAD
     <string name="falafels_with_pepper_taktouka_10_00">Falafels with pepper taktouka 10,00 €</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-=======
     <string name="profile_instructions">Please login to your account \n for pre-order or home delivery
     \n\n If you do not have an account yet, \n please choose sign up</string>
     <string name="profile_login">Login</string>
@@ -29,5 +24,4 @@
     <string name="address_hint">Needed for home delivery</string>
     <string name="password_hint">Invent a unique password</string>
     <string name="signUp_btn">Sign up</string>
->>>>>>> d1c33750c164676fbe07346e999c6ab6e1e7979c
 </resources>
