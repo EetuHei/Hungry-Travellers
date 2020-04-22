@@ -1,14 +1,16 @@
-package hungry.travelersapp.hungry_travellers_app.ui.home;
+package hungry.travelersapp.hungry_travellers_app.ui.menu;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+import hungry.travelersapp.hungry_travellers_app.R;
+
+
+public class MenuViewModel extends ViewModel {
+
 
     /*private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public MenuViewModel() {
         mText = new MutableLiveData<>();
         mText.setValue("This is home fragment");
     }

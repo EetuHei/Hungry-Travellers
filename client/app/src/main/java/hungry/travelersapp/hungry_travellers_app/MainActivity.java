@@ -10,7 +10,18 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-public class MainActivity extends AppCompatActivity {
+import hungry.travelersapp.hungry_travellers_app.R;
+
+
+import hungry.travelersapp.hungry_travellers_app.ui.reserve.DatePickerFragment;
+import hungry.travelersapp.hungry_travellers_app.ui.reserve.ReserveFragment;
+
+public class MainActivity extends AppCompatActivity implements DatePickerFragment.OnDateReceiveCallBack {
+
+    public void onDateReceive(int year ,int month, int day){
+        ReserveFragment.displaydate(year,month,day);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_reservation, R.id.navigation_profile)
+                R.id.navigation_home, R.id.navigation_menu, R.id.navigation_reservation, R.id.navigation_menu, R.id.navigation_profile)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+       // NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
     }
 

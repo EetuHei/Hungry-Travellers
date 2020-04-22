@@ -1,6 +1,38 @@
 <resources>
-    <string name="app_name">hungry-travellersapp</string>
+    <string name="app_nameP1">Hungry</string>
+    <string name="app_nameP2">Traveler\'s</string>
     <string name="title_home">Home</string>
     <string name="title_reservation">Reservation</string>
     <string name="title_profile">Profile</string>
+    <string name="title_menu">Menu</string>
+    <string name="opening_hours1">Mon – Sat 11.00–23.00 \n Sun 11.00-23.00</string>
+    <string name="contacts">Hungry Traveler\'s, \n Uusikatu 70, 90200 Oulu \n 045 32 67 895</string>
+    <string name="introducing">Welcome to our restaurant! \n\n We will offer you delicious variety of \n
+    homemade dishes from different cultures. \n Enjoy!</string>
+
+    <string name="title_activity_delivery">DeliveryActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="falafels_with_pepper_taktouka_10_00">Falafels with pepper taktouka 10,00 €</string>
+    <string name="profile_instructions">Please login to your account \n for pre-order or home delivery
+    \n\n If you do not have an account yet, \n please choose sign up</string>
+    <string name="profile_login">Login</string>
+    <string name="profile_signUp">Sign up</string>
+    <string name="text_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="log_in">Login</string>
+    <string name="text_nameOfUser">Your name</string>
+    <string name="email_hint">Needed in login</string>
+    <string name="text_phoneOfUser">Your phone number</string>
+    <string name="text_address">Your address</string>
+    <string name="address_hint">Needed for home delivery</string>
+    <string name="password_hint">Invent a unique password</string>
+    <string name="signUp_btn">Sign up</string>
 </resources>
