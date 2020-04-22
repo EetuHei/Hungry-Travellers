@@ -11,32 +11,50 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import hungry.travelersapp.hungry_travellers_app.CartData.CartActivity;
+import hungry.travelersapp.hungry_travellers_app.CartData.CartAdapter;
 import hungry.travelersapp.hungry_travellers_app.MainActivity;
 import hungry.travelersapp.hungry_travellers_app.R;
 import hungry.travelersapp.hungry_travellers_app.ui.home.HomeFragment;
+import hungry.travelersapp.hungry_travellers_app.ui.menu.Food;
+import hungry.travelersapp.hungry_travellers_app.ui.profile.LoginActivity;
+import hungry.travelersapp.hungry_travellers_app.ui.profile.User;
 import hungry.travelersapp.hungry_travellers_app.ui.reserve.Reservations;
 
 
 public class DeliveryActivity extends AppCompatActivity {
 
-
     public String orderName = "";
     public String orderAddress = "";
     public String orderPhoneNumber = "";
+    DatabaseReference databaseOrders;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
 
+        databaseOrders = FirebaseDatabase.getInstance().getReference("Orders");
+
         final EditText userInput = findViewById(R.id.order_name);
         final EditText userInput2 = findViewById(R.id.order_address);
         final EditText userInput3 = findViewById(R.id.order_phoneNumber);
         final Button orderBtn = findViewById(R.id.ButtonOrder);
         final Button cancelBtn = findViewById(R.id.ButtonCancel);
+
 
         userInput.addTextChangedListener(new TextWatcher() {
             @Override
@@ -95,8 +113,15 @@ public class DeliveryActivity extends AppCompatActivity {
                     Log.d(orderAddress, "Address");
                     Log.d(orderPhoneNumber, "number");
 
+                    String id = databaseOrders.push().getKey();
+
+                    Orders order = new Orders(id, orderName, orderAddress, orderPhoneNumber);
+
+                    databaseOrders.child(id).setValue(order);
+
                     Toast.makeText(getApplicationContext(), "Order successful!", Toast.LENGTH_LONG).show();
-                    // Validation is working for everything else except picked date because it seems to default to 00.01.00.
+
+                    orderSuccessful();
                 }
             }
         });
@@ -112,6 +137,11 @@ public class DeliveryActivity extends AppCompatActivity {
     }
 
     public void cancelDelivery(){
+        Intent intent = new Intent(DeliveryActivity.this, CartActivity.class);
+        startActivity(intent);
+    }
+
+    public void orderSuccessful(){
         Intent intent = new Intent(DeliveryActivity.this, MainActivity.class);
         startActivity(intent);
     }
