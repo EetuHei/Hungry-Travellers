@@ -2,6 +2,7 @@ package hungry.travelersapp.hungry_travellers_app.ui.reserve;
 
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -35,6 +36,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 import hungry.travelersapp.hungry_travellers_app.R;
+import hungry.travelersapp.hungry_travellers_app.ui.delivery.DeliveryActivity;
 
 public class ReserveFragment extends Fragment  {
 
@@ -207,6 +209,7 @@ public class ReserveFragment extends Fragment  {
 
         return root;
     }
+
 
     public static void displaydate(int year, int monthOfYear, int dayOfMonth) {
         yearData = year;

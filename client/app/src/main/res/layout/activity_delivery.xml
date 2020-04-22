@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/text_reserve"
+            android:text="Home Delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/text_people"
+            android:text="Your name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/order_name"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/order_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mikko Mallikas"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/text_name"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/text_name"
+            android:text="Your address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/order_address"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/order_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Testikuja 2 A 25"
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/text_number"
+            android:text="Your phone number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/order_phoneNumber"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/order_phoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="1234567890"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/ButtonOrder"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/ButtonOrder"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="PLACE ORDER"
+            tools:ignore="MissingConstraints" />
+        <Button
+            android:id="@+id/ButtonCancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="CANCEL ORDER"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

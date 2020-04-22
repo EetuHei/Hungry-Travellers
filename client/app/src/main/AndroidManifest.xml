@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".ui.delivery.DeliveryActivity"
+                  android:label="Delivery"></activity>
+
         <activity android:name=".CartData.CartActivity"></activity>
         <activity android:name=".ui.profile.SignUpActivity"></activity>
         <activity android:name=".ui.profile.LoginActivity" />

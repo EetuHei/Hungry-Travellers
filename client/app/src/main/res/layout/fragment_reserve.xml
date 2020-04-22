@@ -112,6 +112,7 @@
                     android:textAlignment="center"
                     android:textSize="20sp" />
             </LinearLayout>
+
             <Button
                 android:id="@+id/datePickerButton"
                 android:layout_width="fill_parent"
